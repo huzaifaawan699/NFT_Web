@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.7s ease-in-out forwards;
+}
+/* styles.css */
+h1 span {
+  transition: color 0.3s ease;
+}
+
+h1 span:hover {
+  color: #f87171; /* Tailwind red-400 */
+}
+
+p:hover {
+  color: #e5e7eb; /* Tailwind gray-300 */
+}
+@keyframes slide-infinite {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-infinite {
+  display: flex;
+  justify-content: space-around;
+  animation: slide-infinite 20s linear infinite;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-animate-1 {
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+.video-animate-2 {
+  animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+
+.video-animate-3 {
+  animation: fadeInUp 1s ease-in-out 1s forwards;
+}
+
+.video-animate-4 {
+  animation: fadeInUp 1s ease-in-out 1.5s forwards;
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  display: inline-block;
+  animation: slideInRight 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+/* index.css */
+
+/* Define the keyframes for sliding in from the left */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the elements */
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+/* index.css */
+
+/* Define the sliding effect for hover */
+.slide-from-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-from-left:hover {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* Define the sliding animation */
+@keyframes slideInOut {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Apply the animation to elements with an initial delay */
+.infinite-slide {
+  animation: slideInOut 14s ease-in-out infinite;
+  animation-delay: 10s; /* Delay the start of the animation */
+  /* Adjust duration if needed */
+}
+
+/* Add additional global styles or Tailwind CSS configurations here */
+
+/* Add any other global styles or Tailwind CSS configurations here */
+/* Define subtle fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the fade-in animation to the footer */
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Smooth hover transition for buttons */
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #f87171; /* Adjust color for hover effect */
+  transform: scale(1.05);
+}
+/* Tailwind CSS custom styles for the WOW animation */
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+.wow-title {
+  color: white;
+}
+
+.highlight {
+  color: red;
+  animation: colorChange 1s ease-in-out forwards;
+}
+
+/* Ensure the paragraph does not exceed 3 lines */
+.truncate-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Optional: Add a little fade-in effect for the title */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wow-title {
+  animation: fadeIn 1s ease-in-out;
+}
+/* Container for the image to ensure it maintains its layout */
+.zoom-effect {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.05); /* Scales the image to 105% of its original size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a more prominent shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .zoom-effect {
+    /* Adjust scaling for smaller screens */
+    transform: scale(1.03); /* Slightly smaller scale for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .zoom-effect {
+    /* Further adjustments for very small screens */
+    transform: scale(1.02); /* Minimal scale for very small screens */
+  }
+}
